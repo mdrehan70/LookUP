@@ -1,7 +1,7 @@
 .following-container {
   padding: 20px;
   background-color: #f9f9f9;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .following-title {
@@ -48,7 +48,8 @@
 
 @media screen and (max-width: 480px) {
   .following-container {
-    max-height: 90vh;
+    max-height: 85vh;
     overflow-y: auto;
+    margin-top: 15px;
   }
 }
