@@ -35,3 +35,10 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 480px) {
+  .followers-container {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
