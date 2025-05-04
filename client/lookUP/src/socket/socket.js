@@ -1,7 +1,7 @@
 // socket.js
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:8080", {
+const socket = io("https://lookup-g4bt.onrender.com", {
   transports: ["websocket"], // ensures a clean websocket connection
   autoConnect: false,
 });

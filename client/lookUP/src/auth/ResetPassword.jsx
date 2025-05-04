@@ -28,7 +28,7 @@ const ResetPassword = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/auth/reset-password",
+        "https://lookup-g4bt.onrender.com/api/auth/reset-password",
         { email, newPassword }
       );
 

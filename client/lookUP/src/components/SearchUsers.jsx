@@ -29,7 +29,7 @@ const SearchUsers = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:8080/api/search-users?name=${searchText}`
+        `https://lookup-g4bt.onrender.com/api/search-users?name=${searchText}`
       );
       console.log(response.data);
       setUsers(response.data);

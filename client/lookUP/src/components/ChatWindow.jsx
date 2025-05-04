@@ -21,7 +21,7 @@ function ChatWindow() {
     const fetchUserDetails = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/api/user-profile/${id}`
+          `https://lookup-g4bt.onrender.com/api/user-profile/${id}`
         );
         setProfileImage(res.data.user.profilePic);
         setName(res.data.user.name);
@@ -33,7 +33,7 @@ function ChatWindow() {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/chat/messages/${userData._id}/${id}`
+          `https://lookup-g4bt.onrender.com/api/chat/messages/${userData._id}/${id}`
         );
         setMessages(response.data);
       } catch (error) {
@@ -89,7 +89,7 @@ function ChatWindow() {
 
     // Send to DB
     try {
-      await axios.post("http://localhost:8080/api/chat/send-messages", {
+      await axios.post("https://lookup-g4bt.onrender.com/api/chat/send-messages", {
         senderId: userData._id,
         receiverId: id,
         message: input,

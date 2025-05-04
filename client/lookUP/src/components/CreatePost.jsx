@@ -60,7 +60,7 @@ function CreatePost({ onPostCreate }) {
 
       // Call the API to save the post in the database
       const response = await axios.post(
-        "http://localhost:8080/api/create-new-post",
+        "https://lookup-g4bt.onrender.com/api/create-new-post",
         newPost,
         {
           headers: {

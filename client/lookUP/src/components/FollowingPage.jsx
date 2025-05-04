@@ -14,7 +14,7 @@ const FollowingPage = () => {
       try {
         console.log(`Fetching following for userId: ${id}`); // Log the userId
         const res = await axios.get(
-          `http://localhost:8080/api/user-following/${id}`
+          `https://lookup-g4bt.onrender.com/api/user-following/${id}`
         );
         console.log("Response data: ", res.data); // Log the response data
         setFollowing(res.data.following); // Assuming the response contains a "following" array

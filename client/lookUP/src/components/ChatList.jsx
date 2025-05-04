@@ -14,7 +14,7 @@ function ChatList() {
 
       try {
         const res = await axios.get(
-          `http://localhost:8080/api/chat/user/${userData._id}`
+          `https://lookup-g4bt.onrender.com/api/chat/user/${userData._id}`
         );
         setChats(res.data);
       } catch (error) {

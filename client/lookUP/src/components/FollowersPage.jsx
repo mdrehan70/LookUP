@@ -13,7 +13,7 @@ const FollowersPage = () => {
     const fetchFollowers = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/api/user-followers/${id}`
+          `https://lookup-g4bt.onrender.com/api/user-followers/${id}`
         );
         setFollowers(res.data.followers);
       } catch (error) {
