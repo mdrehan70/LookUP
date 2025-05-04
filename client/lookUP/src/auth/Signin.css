@@ -1,0 +1,111 @@
+.signin-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #fce4ec, #f8bbd0);
+}
+
+.signin-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #c2185b;
+}
+
+.signin-form input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.signin-button {
+  background-color: #c2185b;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signin-button:hover {
+  background-color: #880e4f;
+}
+
+.signup-redirect {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.signup-redirect a {
+  color: #c2185b;
+  font-weight: 500;
+  text-decoration: none;
+}
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem; /* Leave space for the eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  top: 35%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .signin-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .signin-form {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .signin-wrapper {
+    padding: 1rem;
+  }
+
+  .signin-form {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .signin-form input {
+    padding: 0.6rem;
+  }
+
+  .signin-button {
+    padding: 0.7rem;
+  }
+}

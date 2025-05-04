@@ -1,0 +1,137 @@
+/* Container Styling */
+.chats-container {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom right, #fef9f9, #f3faff);
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e8f0;
+}
+
+/* Header */
+.chat-header {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #374151;
+  font-weight: 700;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Chat List Container */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Chat User Entry */
+.chat-user {
+  background: #ffffff;
+  border: 1px solid #dce1e7;
+  border-radius: 14px;
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.025);
+}
+
+.chat-user:hover {
+  background: #e9f5ff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Chat Info */
+.chat-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Name */
+.chat-user-name {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #2f3e46;
+}
+
+/* Message Preview */
+.chat-latest-message {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Unread Message Badge */
+.unread-badge {
+  width: 24px;
+  height: 24px;
+  background-color: #ff7f50;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #e9f5ff;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .chats-container {
+    padding: 18px;
+  }
+
+  .chat-user {
+    padding: 14px 18px;
+  }
+
+  .chat-user-name {
+    font-size: 1.05rem;
+  }
+
+  .chat-latest-message {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-header {
+    font-size: 1.6rem;
+  }
+
+  .chat-user-name {
+    font-size: 0.95rem;
+  }
+
+  .chat-latest-message {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chats-container {
+    padding: 12px;
+  }
+
+  .chat-user {
+    padding: 10px 14px;
+  }
+
+  .chat-user-name {
+    font-size: 0.9rem;
+  }
+
+  .chat-latest-message {
+    font-size: 0.8rem;
+  }
+}

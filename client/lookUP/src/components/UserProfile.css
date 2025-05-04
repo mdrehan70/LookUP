@@ -1,0 +1,427 @@
+.profile-container {
+  background: linear-gradient(135deg, #fff9f1, #eaf7f0);
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.profile-pic {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #333; /* Ensure dark color */
+  font-weight: bold;
+}
+
+.username {
+  font-size: 1.2rem;
+  color: #666; /* Darker color for contrast */
+  margin-top: 5px;
+}
+
+.username,
+.user-name {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.follow-stats {
+  display: flex;
+  gap: 20px;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.follow-btn,
+.message-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.follow-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.message-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+.edit-profile-btn {
+  background: linear-gradient(135deg, #00b894, #0984e3);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: auto;
+  color: #fff;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+  background: linear-gradient(135deg, #0984e3, #00cec9);
+  transform: scale(1.05);
+}
+
+.posts-title {
+  margin: 30px 0 10px;
+  font-size: 1.4rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.post-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 16px 16px 12px 16px; /* padding: top-right-bottom-left */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Space between image and caption */
+}
+
+.delete-post-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  /* background: #e0e7ff; */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #5d6d7e;
+  font-size: 20px;
+  padding: 5px 6px;
+  border-radius: 60%;
+  transition: background 0.3s;
+
+  z-index: 10;
+}
+
+.delete-post-btn:hover {
+  background: #b8c6e3;
+  color: #34495e;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+#profileImage {
+  padding: 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#profileImage:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  background-color: #fff;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9; /* light solid background */
+  color: #333; /* darker text */
+  outline: none; /* remove default blue outline */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Make input fields stand out more when selected */
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  background-color: #fff; /* make it even brighter when focusing */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.save-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+.image-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-content img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.popup-caption {
+  margin-top: 15px;
+  text-align: center;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.popup-caption p {
+  margin: 6px 0;
+}
+
+.posted-time {
+  font-size: 0.85em;
+  color: #777;
+}
+
+.cancel-popup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* background-color: #ff4747; */
+  background: transparent;
+  border: none;
+  color: #5d6d7e;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 6px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  z-index: 2001;
+}
+
+.cancel-popup-btn:hover {
+  background: #b8c6e3;
+  transform: scale(1.1);
+  color: #34495e;
+}
+
+.cancel-popup-btn:active {
+  transform: scale(0.95);
+}
+
+/* video tag styling */
+
+/* Post Grid Styling for Video */
+.post-card video {
+  width: 100%;
+  height: 160px; /* Ensures the video has the same height as the image */
+  object-fit: cover; /* Ensures the video fills the area without distortion */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  z-index: 9;
+}
+
+/* Additional adjustments for smaller screens in the grid */
+@media (max-width: 768px) {
+  .post-card video {
+    height: 120px; /* Adjust height for smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .popup-content img {
+    max-height: 60vh;
+  }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 12px;
+    margin-top: 30px;
+  }
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .user-name {
+    font-size: 1.5rem;
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  /* Adjust profile picture size */
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Ensure proper spacing and alignment for name and username */
+  .user-name {
+    font-size: 1.4rem;
+    margin-top: 10px; /* Adjust margin for better alignment */
+  }
+
+  .username {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    text-align: center; /* Center the username */
+  }
+
+  /* Adjust follow stats to stack vertically */
+  .follow-stats {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center; /* Center the follow stats */
+  }
+
+  /* Adjust the action buttons to take full width */
+  .action-buttons {
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .follow-btn,
+  .message-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  /* Align the edit profile button properly */
+  .edit-profile-btn {
+    margin-top: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Adjust the posts grid layout */
+  .posts-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(100px, 1fr)
+    ); /* Ensure smaller columns for smaller screens */
+  }
+
+  /* Adjust post card size */
+  .post-card img {
+    height: 120px; /* Adjust image size to fit in smaller screens */
+  }
+}

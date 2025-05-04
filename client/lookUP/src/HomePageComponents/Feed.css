@@ -1,0 +1,68 @@
+/* Feed.css */
+.feed {
+  flex: 1;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f2f5;
+  overflow-y: auto;
+  gap: 1.5rem;
+}
+
+/* Scrollbar */
+.feed::-webkit-scrollbar {
+  width: 8px;
+}
+
+.feed::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 10px;
+}
+
+/* Loading message */
+.loading-message {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 2rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* No posts message */
+.no-posts-message {
+  font-size: 1.1rem;
+  color: #888;
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Optional refresh button styles if you want to enable it */
+.refresh-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.refresh-button:hover {
+  background-color: #0056b3;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

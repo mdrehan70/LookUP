@@ -1,0 +1,115 @@
+.create-post {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+}
+
+.create-post h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.create-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.file-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-label {
+  font-size: 16px;
+  color: #007dc1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-preview {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-thumbnail {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+}
+
+.caption-textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 100px;
+  font-family: "Arial", sans-serif;
+}
+
+.create-post-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+/* The rest of your CSS styles remain the same */
+.submit-post-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-post-btn:hover {
+  background-color: #007dc1;
+}
+
+.cancel-post-btn {
+  display: inline-block;
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  transition: background 0.3s;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.cancel-post-btn:hover {
+  background-color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .create-post {
+    padding: 20px;
+  }
+
+  .submit-post-btn,
+  .cancel-post-btn {
+    font-size: 14px;
+  }
+}
