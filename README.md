@@ -1,4 +1,5 @@
 # (lookUP)Social Media Application
+Check out the live demo here:  👉 # rehanlookup.vercel.app
 
 🌟 Overview
 This is a full-stack Social Media Application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The app provides core features you'd expect in a modern social platform — user authentication, creating and managing posts, liking, commenting, following users, real-time updates, and more.
