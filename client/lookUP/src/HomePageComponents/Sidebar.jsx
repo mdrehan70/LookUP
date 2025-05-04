@@ -48,7 +48,7 @@ function Sidebar() {
         <img
           src={logo}
           alt="logo"
-          style={{ width: "120px", height: "30px", margin: "0px" }}
+          style={{ width: "120px", height: "35px", margin: "0px" }}
         />
       </div>
 
