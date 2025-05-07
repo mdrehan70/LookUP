@@ -24,7 +24,7 @@ export const getHomePagePosts = async (req, res) => {
     ];
 
     // Time threshold: last 24 hours
-    const fortyEightHoursAgo = new Date(Date.now() - 48 * 60 * 60 * 1000);
+    const fortyEightHoursAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
 
     // Fetch and filter posts in DB
     const posts = await PostModel.find({
